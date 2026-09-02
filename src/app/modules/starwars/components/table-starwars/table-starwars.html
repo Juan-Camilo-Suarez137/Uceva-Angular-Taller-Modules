@@ -1,1 +1,20 @@
-<p>table-starwars works!</p>
+<table class="table-starwars">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Especie</th>
+      <th>Planeta natal</th>
+      <th>Facción</th>
+      <th>Arma</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let character of characters">
+      <td>{{ character.name }}</td>
+      <td>{{ character.species }}</td>
+      <td>{{ character.homeworld }}</td>
+      <td>{{ character.affiliation }}</td>
+      <td>{{ character.weapon }}</td>
+    </tr>
+  </tbody>
+</table>
