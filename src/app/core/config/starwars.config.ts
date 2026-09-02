@@ -1,5 +1,4 @@
-import { StarWarsCharacter } from '../interfaces/starwars-character.interface';
-
+import { StarWarsCharacter } from '../../modules/starwars/interfaces/starwars';
 /**
  * Fuente de datos estática para el módulo de Star Wars.
  * Simula el origen de información que normalmente
