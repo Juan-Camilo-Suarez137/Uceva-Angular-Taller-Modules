@@ -1,6 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { StarWarsCharacter } from '../../interfaces/starwars';
 
+/**
+ * Componente que muestra los personajes de Star Wars en una tabla.
+ *
+ * Recibe los personajes desde la página del módulo y asigna una clase de
+ * color a cada insignia según la facción del personaje.
+ */
 @Component({
   selector: 'app-table-starwars',
   standalone: false,
@@ -8,6 +14,7 @@ import { StarWarsCharacter } from '../../interfaces/starwars';
   styleUrl: './table-starwars.scss'
 })
 export class TableStarwars {
+  /** Personajes que se renderizarán en las filas de la tabla. */
   @Input() characters: StarWarsCharacter[] = [];
 
   /**
