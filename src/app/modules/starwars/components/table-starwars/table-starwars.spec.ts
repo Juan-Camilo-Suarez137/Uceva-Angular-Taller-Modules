@@ -48,6 +48,20 @@ describe('TableStarwars', () => {
     });
   });
 
+  it('debería aplicar el color correspondiente a cada facción', () => {
+    const rows = fixture.debugElement.queryAll(By.css('tbody tr'));
+
+    rows.forEach((row, index) => {
+      const character = component.characters[index];
+      const badge = row.queryAll(By.css('td'))[3].query(By.css('span'));
+
+      expect(badge.nativeElement.className).toContain('badge');
+      expect(badge.nativeElement.className).toContain(
+        component.getAffiliationClass(character.affiliation)
+      );
+    });
+  });
+
   it('debería retornar la clase correcta para cada facción', () => {
     expect(component.getAffiliationClass('Alianza Rebelde')).toBe('badge-rebel');
     expect(component.getAffiliationClass('Imperio Galáctico')).toBe('badge-empire');

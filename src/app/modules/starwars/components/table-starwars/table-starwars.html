@@ -13,7 +13,11 @@
       <td>{{ character.name }}</td>
       <td>{{ character.species }}</td>
       <td>{{ character.homeworld }}</td>
-      <td>{{ character.affiliation }}</td>
+      <td>
+        <span class="badge" [class]="'badge ' + getAffiliationClass(character.affiliation)">
+          {{ character.affiliation }}
+        </span>
+      </td>
       <td>{{ character.weapon }}</td>
     </tr>
   </tbody>
