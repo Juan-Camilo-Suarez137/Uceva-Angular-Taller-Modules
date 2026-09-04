@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/starwars/starwars-module').then(m => m.StarwarsModule)
   },
   {
+    path: 'nasa',
+    loadChildren: () => import('./modules/nasa/nasa-module').then(m => m.NasaModule)
+  },
+  {
     path: '**',
     redirectTo: 'users'
   },
