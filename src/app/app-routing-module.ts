@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/starwars/starwars-module').then(m => m.StarwarsModule)
   },
   {
+    path: 'neva',
+    loadChildren: () => import('./modules/neva/neva-module').then(m => m.NevaModule)
+  },
+  {
     path: '**',
     redirectTo: 'users'
   },
