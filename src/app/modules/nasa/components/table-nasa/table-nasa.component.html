@@ -1,0 +1,33 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Imagen</th>
+			<th scope="col">Lanzamiento</th>
+			<th scope="col">Estado</th>
+			<th scope="col">Misión</th>
+			<th scope="col">Cohete</th>
+			<th scope="col">Ubicación</th>
+			<th scope="col">Fecha</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (launch of launches; track launch.id) {
+			<tr>
+				<td>
+					<img [src]="launch.image" [alt]="launch.name" width="120" height="80">
+				</td>
+				<td>{{ launch.name }}</td>
+				<td>
+					<app-badge
+						[text]="launch.status.name"
+						[type]="statusMap[launch.status.name]">
+					</app-badge>
+				</td>
+				<td>{{ launch.mission.name }}</td>
+				<td>{{ launch.rocket.configuration.name }}</td>
+				<td>{{ launch.pad.location.name }}</td>
+				<td>{{ launch.net | date: 'medium' }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
