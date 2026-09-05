@@ -18,10 +18,9 @@ import { Result } from '../../interfaces/nasa.interface';
  * ```
  */
 @Component({
-  selector: 'app-table-nasa.component',
+  selector: 'app-table-nasa',
   standalone: false,
   templateUrl: './table-nasa.component.html',
-  styleUrl: './table-nasa.component.scss',
 })
 export class TableNasaComponent {
   /**

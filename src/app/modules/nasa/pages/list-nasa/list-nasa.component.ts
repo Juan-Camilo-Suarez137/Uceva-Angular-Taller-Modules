@@ -20,8 +20,7 @@ import { NasaService } from '../../services/nasa.service';
 @Component({
   selector: 'app-list-nasa.component',
   standalone: false,
-  templateUrl: './list-nasa.component.html',
-  styleUrl: './list-nasa.component.scss',
+  template: `<app-table-nasa [launches]="launches"></app-table-nasa>`
 })
 export class ListNasaComponent {
   /**
