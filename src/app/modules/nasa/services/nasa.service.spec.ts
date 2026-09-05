@@ -28,6 +28,22 @@ describe('NasaService', () => {
     request.flush({ count: 0, next: '', previous: null, results: [] });
   });
 
+  it('should return the launches response', () => {
+    const response = {
+      count: 1,
+      next: '',
+      previous: null,
+      results: [],
+    };
+
+    service.getAllLaunches().subscribe(result => {
+      expect(result).toEqual(response);
+    });
+
+    const request = httpTestingController.expectOne('https://ll.thespacedevs.com/2.2.0/launch/');
+    request.flush(response);
+  });
+
   it('should request launches with pagination parameters', () => {
     service.getLaunches(20, 40).subscribe();
 
