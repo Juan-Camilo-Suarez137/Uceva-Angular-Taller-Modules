@@ -1,0 +1,62 @@
+.table-neva {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+
+  thead {
+    tr {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      text-align: center;
+      padding: 1rem;
+      font-weight: 700;
+      color: #111827;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #f3f4f6;
+
+      &:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+    }
+
+    td {
+      padding: 1rem;
+      color: #374151;
+      vertical-align: middle;
+    }
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.badge-guardians {
+  background-color: #16a34a; // verde, guardianes del bosque
+}
+
+.badge-corruption {
+  background-color: #7c3aed; // morado, la corrupción
+}
+
+.badge-default {
+  background-color: #6b7280; // gris, sin facción definida
+}
