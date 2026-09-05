@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableNasaComponent } from './table-nasa.component';
@@ -8,7 +9,8 @@ describe('TableNasaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableNasaComponent]
+      declarations: [TableNasaComponent],
+      imports: [CommonModule],
     })
     .compileComponents();
 
