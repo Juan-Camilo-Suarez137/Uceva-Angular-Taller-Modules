@@ -19,6 +19,9 @@ export class TableNeva {
 
   /**
    * Determina la clase de color del badge según la facción del personaje.
+   *
+   * @param faction Facción del personaje a evaluar.
+   * @returns Clase CSS correspondiente al badge de la facción.
    */
   getFactionClass(faction: string): string {
     const map: Record<string, string> = {
