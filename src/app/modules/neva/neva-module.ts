@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { NevaRoutingModule } from './neva-routing-module';
 import { TableNeva } from './components/table-neva/table-neva';
+import { ListNeva } from './pages/list-neva/list-neva';
 
 
 @NgModule({
   declarations: [
-    TableNeva
+    TableNeva,
+    ListNeva
   ],
   imports: [
     CommonModule,
