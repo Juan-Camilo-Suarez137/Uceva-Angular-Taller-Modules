@@ -17,7 +17,12 @@
 					<img [src]="launch.image" [alt]="launch.name" width="120" height="80">
 				</td>
 				<td>{{ launch.name }}</td>
-				<td>{{ launch.status.name }}</td>
+				<td>
+					<app-badge
+						[text]="launch.status.name"
+						[type]="statusMap[launch.status.name]">
+					</app-badge>
+				</td>
 				<td>{{ launch.mission.name }}</td>
 				<td>{{ launch.rocket.configuration.name }}</td>
 				<td>{{ launch.pad.location.name }}</td>

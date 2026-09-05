@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Result } from '../../interfaces/nasa.interface';
+import { BadgeType } from '../../../shared/interfaces/badge.interface';
+import { Result, StatusName } from '../../interfaces/nasa.interface';
 
 /**
  * Componente de tabla de lanzamientos espaciales.
@@ -32,4 +33,17 @@ export class TableNasaComponent {
    * el cohete y la plataforma de lanzamiento.
    */
   @Input() launches: Result[] = [];
+
+  /**
+   * Mapeo de estados de lanzamiento a colores del badge.
+   *
+   * Los colores permiten distinguir visualmente el resultado o la órbita
+   * asociada a cada lanzamiento.
+   */
+  statusMap: Record<StatusName, BadgeType> = {
+    'Launch Successful': 'success',
+    'Launch Failure': 'danger',
+    'Low Earth Orbit': 'primary',
+    'Elliptical Orbit': 'warning',
+  };
 }
